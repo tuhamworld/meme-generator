@@ -11,16 +11,7 @@
   }
 
 
-  @media (max-width: 968px) {
 
-    header h4 {
-      margin-left: -20%;
-    }
-
-    header {
-      padding-right: 10px;
-    }
-  }
 
   @media (prefers-color-scheme: light) {
     :root {

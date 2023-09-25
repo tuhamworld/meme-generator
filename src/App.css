@@ -2,6 +2,8 @@ header {
   background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
   color: #fff;
   flex-shrink: 0;
+  height: 65px;
+  padding: 0 20px;
 }
 
 header nav {
@@ -10,31 +12,31 @@ header nav {
   justify-content: space-around;
 }
 
-header img {
-  margin-left: -5%;
+.header--image {
+  margin-right: 6px;
+
 }
 
-header nav h3 {
+.header--title {
   font-family: Karla;
-  margin-left: -25%;
+  margin-right: auto;
   width: 140px;
   color: #FFF;
-  font-size: 20.748px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -2.075px;
 }
 
-header h4 {
-  margin-left: 25%;
+.header--project {
   width: 189px;
   height: 14px;
   flex-shrink: 0;
   color: #FFF;
   text-align: right;
   font-family: Inter;
-  font-size: 12px;
+  font-size: .75rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
