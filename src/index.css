@@ -13,11 +13,11 @@
 
   @media (max-width: 968px) {
 
-    .navbar h4 {
+    header h4 {
       margin-left: -20%;
     }
 
-    .navbar {
+    header {
       padding-right: 10px;
     }
   }

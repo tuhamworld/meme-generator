@@ -1,20 +1,20 @@
-.navbar {
+header {
   background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
   color: #fff;
   flex-shrink: 0;
 }
 
-.navbar nav {
+header nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.navbar img {
+header img {
   margin-left: -5%;
 }
 
-.navbar nav h3 {
+header nav h3 {
   font-family: Karla;
   margin-left: -25%;
   width: 140px;
@@ -26,7 +26,7 @@
   letter-spacing: -2.075px;
 }
 
-.navbar h4 {
+header h4 {
   margin-left: 25%;
   width: 189px;
   height: 14px;
