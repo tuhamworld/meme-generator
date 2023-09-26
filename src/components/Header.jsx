@@ -1,7 +1,7 @@
 import React from "react";
 import trollFace from "../assets/troll-face.png";
 
-export default function () {
+export default function Header() {
   return (
     <header>
       <nav>
@@ -13,7 +13,9 @@ export default function () {
         />
 
         <h2 className="header--title">Meme Generator</h2>
-        <h4 className="header--project">React Course - Project 3</h4>
+        <h4 className="header--description">
+          Create Your Own Memes in seconds
+        </h4>
       </nav>
     </header>
   );
