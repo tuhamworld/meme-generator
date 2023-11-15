@@ -1,3 +1,3 @@
 # Meme Generator
 
-Building a Meme Generator making use of Event Listerners, States, Conditional Rendering, Forms, etc in React
+This web application allows you to create hilarious memes with ease. Express your creativity by combining images and text to generate memes that will leave your friends laughing.
