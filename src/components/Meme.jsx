@@ -11,7 +11,7 @@ export default function Meme() {
     const randomNumber = Math.floor(Math.random() * memes.length);
     const memeUrl = memes[randomNumber].url;
 
-    setMemeImage(memeImage => memeUrl);
+    setMemeImage(memeUrl);
     
   }
 
@@ -29,9 +29,9 @@ export default function Meme() {
         </button>
       </div>
 
-      <div className="memeImage--box">
+  
         <img src={memeImage} alt="" className="meme--image" />
-      </div>
+    
     </main>
   );
 }
