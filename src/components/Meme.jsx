@@ -3,7 +3,7 @@ import memesData from "../memesData";
 
 export default function Meme() {
 
-  const [memeImage, setMemeImage] = React.useState('');
+  const [memeImage, setMemeImage] = React.useState('https://i.imgflip.com/9vct.jpg');
 
 
   function showImageUrl() {
