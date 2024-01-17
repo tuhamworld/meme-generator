@@ -10,18 +10,18 @@ export default function Meme() {
   }
   );
 
-  const [allMemeImages, setAllMemeImages] = useState(memesData.data.memes)
+  const [allMemeImages, setAllMemeImages] = useState(memesData)
 
 
   function showImageUrl() {
-    // const memes = memesData.data.memes;
-    const randomNumber = Math.floor(Math.random() * allMemeImages.length);
-    const memeUrl = allMemeImages[randomNumber].url;
+    const memes = allMemeImages.data.memes;
+    const randomNumber = Math.floor(Math.random() * memes.length);
+    const memeUrl = memes[randomNumber].url;
 
-    setMeme({
-      ...meme,
+    setMeme(prevMeme => ({
+      ...prevMeme,
       randomImage: memeUrl
-    });
+    }));
     
   }
 
