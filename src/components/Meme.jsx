@@ -1,19 +1,23 @@
-import React, { useState } from "react";
-import memesData from "../memesData";
+import React, { useEffect, useState } from "react";
 
-export default function Meme() {
+const Meme = () => {
   const [meme, setMeme] = useState({
     topText: "",
     bottomText: "",
     randomImage: "https://i.imgflip.com/9vct.jpg",
   });
 
-  const [allMemeImages, setAllMemeImages] = useState(memesData);
+  const [allMemeImages, setAllMemeImages] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then((res) => res.json())
+      .then((data) => setAllMemeImages(data.data.memes));
+  }, [allMemeImages]);
 
   function showImageUrl() {
-    const memes = allMemeImages.data.memes;
-    const randomNumber = Math.floor(Math.random() * memes.length);
-    const memeUrl = memes[randomNumber].url;
+    const randomNumber = Math.floor(Math.random() * allMemeImages.length);
+    const memeUrl = allMemeImages[randomNumber].url;
 
     setMeme((prevMeme) => ({
       ...prevMeme,
@@ -22,13 +26,12 @@ export default function Meme() {
   }
 
   const handleChange = (event) => {
-    const { name, type, value } = event.target
-    setMeme(prevData => ({
+    const { name, type, value } = event.target;
+    setMeme((prevData) => ({
       ...prevData,
-      [name]: value
-    }))
-  }
-
+      [name]: value,
+    }));
+  };
 
   return (
     <main>
@@ -41,7 +44,6 @@ export default function Meme() {
           value={meme.topText}
           onChange={handleChange}
         />
-
 
         <input
           type="text"
@@ -63,4 +65,6 @@ export default function Meme() {
       </div>
     </main>
   );
-}
+};
+
+export default Meme;
